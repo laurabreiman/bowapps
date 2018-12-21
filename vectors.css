@@ -1,0 +1,15 @@
+body {
+  background-color: midnightblue;
+}
+
+p, h1, span {
+  color: white;
+}
+
+.trainingWord {
+  margin: 5px;
+}
+
+.vectorCount {
+  margin: 5px;
+}

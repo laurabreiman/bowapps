@@ -1,0 +1,42 @@
+svg {
+    margin: 10px;
+}
+
+rect {
+    fill: mediumaquamarine;
+}
+
+#xaxis text{
+  font-size: 10pt;
+}
+
+/* path: axis line, line: tick marks */
+
+#xaxis line {
+  fill: none;
+  stroke: none;
+}
+
+#xaxis path{
+  fill: none;
+
+  /* use stroke, not border, for svg elements */
+  stroke: #bbbbbb;
+  stroke-width: 1px;
+}
+
+body {
+    background-color: midnightblue;
+}
+
+text {
+    fill: white;
+}
+
+.sentence {
+    width: 400px;
+}
+
+.inputRow {
+    margin-left: 10px;
+}

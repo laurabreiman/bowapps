@@ -48,8 +48,7 @@ function createGraph(groups){
       .attr('dy', '1em');
 
 
-  var xAxis = d3.svg.axis()
-                     .scale(xScale);
+  var xAxis = d3.svg.axis().tickFormat(d3.format("d")).scale(xScale);
 
   svg.append("g")
     .attr("id", "xaxis")

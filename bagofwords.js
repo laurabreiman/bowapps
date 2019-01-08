@@ -2,22 +2,23 @@
 var color = "mediumaquamarine";
 var values = make_freq_dict("Another five fish find another faraway fish")
 var groups = make_d3_dict(values)
-var maxFreq = d3.max(groups, function (d) { return d.freq});
 
 var width = 500,
     height = 400;
-
-var svg = d3
-  .select('body')
-  .append('svg')
-  .attr('width', width + 100)
-  .attr('height', height)
-  .append('g');
 
 var padding = 30;
 createGraph(groups)
 
 function createGraph(groups){
+  var maxFreq = d3.max(groups, function (d) { return d.freq});
+
+  var svg = d3
+    .select('.graphContainer')
+    .append('svg')
+    .attr('width', width + 100)
+    .attr('height', height)
+    .append('g');
+
   var barHeight = height / groups.length - padding;
 
   var yScale = d3.scale.linear()
@@ -65,7 +66,7 @@ function refresh(values){
   //   .bins(x.ticks(20))
   //   (values);
   // Reset y domain using new data
-  d3.selectAll("svg > g > g").remove();
+  d3.selectAll("svg").remove();
 
   var groups = make_d3_dict(values)
   createGraph(groups)

@@ -96,6 +96,8 @@ function make_d3_dict(freq_dict){
 // Calling refresh repeatedly.
 
 $(document).ready(function(){
+  $(".sentence").val("Another five fish find another faraway fish")
+
   $('.sentence').keypress(function(e){
     if(e.keyCode==13){
       $('.submit').click();

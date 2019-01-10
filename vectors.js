@@ -98,6 +98,7 @@ $(document).ready(function(){
     var docToRemove = $(this).attr("data-doc")
     var toRemove = $("div").find("[data-text='" + docToRemove + "']"); 
     toRemove.remove()
+    trainingDocs.pop(trainingDocs.indexOf(docToRemove));
     createTrainingCounts()
     updateTrainingDisplay()
   })
